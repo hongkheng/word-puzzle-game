@@ -1,15 +1,13 @@
-import { Box, Container, Text, VStack } from "native-base"
+import { Box, Text, VStack } from "native-base";
 
 function Start() {
-  return <Box safeArea>
-    <Container>
-      <VStack alignItems='center'>
-        <Text fontSize='3xl'>
-          Start game
-        </Text>
+  return (
+    <Box safeArea>
+      <VStack alignItems="center">
+        <Text fontSize="3xl">Start game</Text>
       </VStack>
-  </Container>
-  </Box>
-} 
+    </Box>
+  );
+}
 
-export default Start
+export default Start;
