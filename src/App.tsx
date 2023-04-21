@@ -1,11 +1,14 @@
+import { NavigationContainer } from "@react-navigation/native";
 import { NativeBaseProvider } from "native-base";
 
-import Start from "./game/Start";
+import Game from "./stacks";
 
 export default function App() {
   return (
     <NativeBaseProvider>
-      <Start />
+      <NavigationContainer>
+        <Game />
+      </NavigationContainer>
     </NativeBaseProvider>
   );
 }

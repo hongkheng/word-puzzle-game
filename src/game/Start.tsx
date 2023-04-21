@@ -1,7 +1,10 @@
+import type { StackScreenProps } from "@react-navigation/stack";
 import { Box, Button, Select, Text, VStack } from "native-base";
 import { useState } from "react";
 
-function Start() {
+type Props = StackScreenProps<RootStackParamList, "Start">;
+
+function Start({ navigation }: Props) {
   const [category, setCategory] = useState("");
 
   return (
@@ -20,7 +23,13 @@ function Start() {
           <Select.Item label="Sea animals" value="sea" />
           <Select.Item label="Dinosaurs" value="dinosaurs" />
         </Select>
-        <Button>Start game</Button>
+        <Button
+          onPress={() => {
+            navigation.navigate("WordPuzzle");
+          }}
+        >
+          Start game
+        </Button>
       </VStack>
     </Box>
   );
